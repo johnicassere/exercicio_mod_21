@@ -1,0 +1,21 @@
+@use 'variaveis';
+@use 'header';
+@use 'shows';
+
+@font-face {
+    font-family: Avenir;
+    src: url(../../assets/fonts/Avenir-Regular.woff2);
+    font-weight: 400;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Avenir;
+    list-style: none;
+    text-decoration: none;
+    background-color: variaveis.$corDeFundo;
+    color: variaveis.$corDoTexto;
+}
+

@@ -1,0 +1,38 @@
+@use 'variaveis';
+
+.shows{
+   padding: 2vw; 
+
+
+    &__tabs{
+        display: flex;
+        justify-content: center;
+
+        &__button{
+            border: none;
+            padding: 16px;
+            font-size: 18px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+    }
+
+    &__list{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        &__item{
+            margin-top: 32px;
+            margin-bottom: 14px;
+            
+            img{
+                max-width: 380px;
+                height: 330px;
+                width: 100%;
+                border: solid 1px #000;
+                border-radius: 9px;
+            }
+
+        }
+    }
+}
