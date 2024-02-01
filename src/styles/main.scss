@@ -1,12 +1,23 @@
 @use 'variaveis';
 @use 'header';
+@use 'classificacao';
 @use 'shows';
+@use 'saiba-mais';
+@use 'faq';
+@use 'footer';
 
 @font-face {
     font-family: Avenir;
     src: url(../../assets/fonts/Avenir-Regular.woff2);
     font-weight: 400;
 }
+
+
+// @mixin text ($fonteSize: 16px){
+//     font-size: $fonteSize;
+//     line-height: $fonteSize + 10px;
+//     color: variaveis.$corTextoPrincipal
+// }
 
 *{
     margin: 0;
@@ -15,7 +26,10 @@
     font-family: Avenir;
     list-style: none;
     text-decoration: none;
-    background-color: variaveis.$corDeFundo;
     color: variaveis.$corDoTexto;
+}
+
+body{
+    background-color: variaveis.$corDeFundo;
 }
 

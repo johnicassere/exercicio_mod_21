@@ -1,0 +1,27 @@
+@use 'variaveis';
+
+.footer{
+    background-color: #181925;
+    margin-top: 120px;
+    padding: 16px;
+
+    &__container{
+         
+
+        &__links{
+            display: flex;
+            justify-content: space-evenly;
+
+
+            &__item{
+                
+                a{
+                    border-radius: 50%;
+                }
+                
+            }
+        }
+        
+        
+    }
+}

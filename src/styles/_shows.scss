@@ -10,10 +10,17 @@
 
         &__button{
             border: none;
+            border-bottom: 4px solid #fff;
             padding: 16px;
             font-size: 18px;
             text-transform: uppercase;
+            background-color: variaveis.$corDeFundo;
             cursor: pointer;
+
+            &:hover{
+                border-radius: 4px;
+                background-color: lighten(variaveis.$corDeFundo, 3%);
+            }
         }
     }
 
@@ -31,6 +38,7 @@
                 width: 100%;
                 border: solid 1px #000;
                 border-radius: 9px;
+                
             }
 
         }
