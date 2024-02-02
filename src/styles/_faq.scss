@@ -4,23 +4,64 @@
 .faq{
     text-align: center;
     margin-top: 60px;
-    h2{
+            h2{
 
-        margin-top: 24px;
-        margin-bottom: 16px;
-    }
+                margin-top: 24px;
+                margin-bottom: 16px;
+            }
 
-    &__links{
+            &__links{
 
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        margin-bottom: 160px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                margin-bottom: 160px;
 
+                @media (max-width: 768px) {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 16px 0;
+                    margin-bottom: 32px;
+                    }
+    
 
-        &__item{
+            &__item{
+                margin-bottom: 24px;
 
-            border: 1px solid #fff;
+                @media (max-width: 768px) {
+                    margin-bottom: 16px;
+                    }
+           
+                    &__question{
+                        position: relative;
+                        cursor: pointer;
 
+                        &::after{
+                            position: absolute;
+                            display: flex;
+                            align-items: center;
+                            top: -1;
+                            left: 280px;
+                            height: 100%;
+                        }
+                        
+                        &__result{
+                             height: 0;
+                             overflow: hidden;
+                             padding: 0 24px;
+                             transition: height, .5s ease;
+                            
+                             &--is-open {
+     
+                                 .faq__links__item__question__result{
+                                     height: auto;
+                                     padding-bottom: 24px;
+                                     transition: height, .5s ease;
+     
+                                 }
+                             }
+                        }
+
+                    }
 
         }
     }

@@ -8,9 +8,14 @@
         display: flex;
         justify-content: center;
 
+        @media (max-width: 768px) {
+            
+              
+            }
+
         &__button{
             border: none;
-            border-bottom: 4px solid #fff;
+            border-bottom: 4px solid transparent;
             padding: 16px;
             font-size: 18px;
             text-transform: uppercase;
@@ -21,12 +26,27 @@
                 border-radius: 4px;
                 background-color: lighten(variaveis.$corDeFundo, 3%);
             }
+
+            &--is-active{
+                border-color: variaveis.$corDoTexto;
+                
+            }
         }
     }
 
     &__list{
-        display: grid;
+        display: none;
         grid-template-columns: 1fr 1fr 1fr;
+
+
+        &--is-active{
+            display: grid;
+
+            @media (max-width: 768px) {
+                display: block;
+                 text-align: center; 
+                }
+        }
 
         &__item{
             margin-top: 32px;
@@ -34,10 +54,17 @@
             
             img{
                 max-width: 380px;
-                height: 330px;
+                height: 280px;
                 width: 100%;
                 border: solid 1px #000;
                 border-radius: 9px;
+
+                
+            }
+
+            p{
+                text-align: center;
+                margin-top: 8px;
                 
             }
 
